@@ -1,0 +1,47 @@
+body {
+    background-color: #e0f2f7; /* Un tono de azul claro */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #03a9f4; /* Un tono de azul más fuerte */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea una cuadrícula responsive */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.imagen-contenedor {
+    overflow: hidden; /* Para que la imagen no se salga del contenedor al hacer hover */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.imagen-contenedor:hover {
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: auto;
+    display: block; /* Evita un espacio extra debajo de la imagen */
+    cursor: pointer; /* Indica que la imagen es interactiva */
+}
