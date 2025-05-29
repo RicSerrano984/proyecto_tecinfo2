@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Futuro Verde - Contenido Interactivo</title>
+    <link rel="stylesheet" href="contenido.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">Un Futuro Verde</div>
+            <ul class="nav-links">
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#galeria">Imágenes</a></li>
+                <li><a href="#videos">Videos Interactivos</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="introduccion" class="hero-section">
+            <div class="hero-overlay">
+                <h1>Construyendo Juntos Un Futuro Verde</h1>
+                <p>Explora un mundo de sostenibilidad, innovación y esperanza. Tu participación es clave.</p>
+                <button class="cta-button" onclick="scrollToSection('galeria')">¡Empieza la Aventura!</button>
+            </div>
+        </section>
+
+        <section id="galeria" class="content-section fade-in">
+            <h2>🌍 Galería Inspiradora: Un Vistazo al Mañana</h2>
+            <div class="image-gallery">
+                <figure class="gallery-item" tabindex="0">
+                    <img src="https://via.placeholder.com/600x400/C8E6C9/4CAF50?text=Energía+Solar" alt="Paneles Solares en un Campo">
+                    <figcaption>Energía Solar: La luz del mañana.</figcaption>
+                    <div class="overlay-text">
+                        <h3>El Poder del Sol</h3>
+                        <p>Descubre cómo la energía solar está transformando la forma en que vivimos y energizamos el mundo. Una fuente inagotable y limpia para todos.</p>
+                        <button class="gallery-button">Más Información</button>
+                    </div>
+                </figure>
+                <figure class="gallery-item" tabindex="0">
+                    <img src="https://via.placeholder.com/600x400/A7D9A4/388E3C?text=Bosque+Urbano" alt="Bosque Urbano con Personas">
+                    <figcaption>Bosques Urbanos: Pulmones de la Ciudad.</figcaption>
+                    <div class="overlay-text">
+                        <h3>Respirar la Ciudad</h3>
+                        <p>Los bosques urbanos mejoran la calidad del aire, reducen el ruido y aumentan el bienestar. Un oasis verde en el corazón de la urbe.</p>
+                        <button class="gallery-button">Explorar Beneficios</button>
+                    </div>
+                </figure>
+                <figure class="gallery-item" tabindex="0">
+                    <img src="https://via.placeholder.com/600x400/B2DFDB/009688?text=Reciclaje+Creativo" alt="Materiales Reciclados Creativos">
+                    <figcaption>Reciclaje Creativo: Reutilizando el Futuro.</figcaption>
+                    <div class="overlay-text">
+                        <h3>Arte y Conciencia</h3>
+                        <p>El reciclaje no es solo separar; es transformar. Ideas innovadoras para darle una segunda vida a lo que creías desechable.</p>
+                        <button class="gallery-button">Ideas de Reciclaje</button>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="videos" class="content-section fade-in">
+            <h2>🎥 Videos Interactivos: Sumérgete en la Sostenibilidad</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>El Impacto del Cambio Climático (Demo)</h3>
+                        <p>Un breve documental que explora las causas y efectos del cambio climático, y cómo podemos actuar.</p>
+                        <button class="video-quiz-button" data-video-id="video1">Ponte a Prueba</button>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLg4E7L167p5r8tZ0eW4fL5Q7P9_0-A0k_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Soluciones Verdes Innovadoras (Demo)</h3>
+                        <p>Descubre proyectos y tecnologías que están liderando el camino hacia un futuro más sostenible.</p>
+                        <button class="video-quiz-button" data-video-id="video2">Aprende Más</button>
+                    </div>
+                </div>
+            </div>
+            <div id="quiz-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>Mini-Quiz Interactivo</h3>
+                    <div id="quiz-questions">
+                        </div>
+                    <button id="submit-quiz-button">Enviar Respuestas</button>
+                    <p id="quiz-result"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="juegos" class="content-section fade-in">
+            <h2>🎮 Zona de Juegos: Aprende Jugando</h2>
+            <div class="game-area">
+                <div class="game-card">
+                    <h3>Eco-Clasificador</h3>
+                    <p>Ayuda a clasificar los residuos correctamente en el tiempo limitado. ¡Demuestra tu conocimiento!</p>
+                    <button class="game-button" data-game-id="eco-clasificador">Jugar Ahora</button>
+                </div>
+                <div class="game-card">
+                    <h3>Aventuras Sostenibles</h3>
+                    <p>Un juego de preguntas y respuestas para desafiar tus conocimientos sobre medio ambiente y sostenibilidad.</p>
+                    <button class="game-button" data-game-id="aventuras-sostenibles">Iniciar Juego</button>
+                </div>
+            </div>
+            <div id="game-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 id="game-title"></h3>
+                    <div id="game-container">
+                        <p id="game-instructions"></p>
+                        <div id="quiz-game-questions"></div>
+                        <input type="text" id="answer-input" style="display:none;" placeholder="Tu respuesta...">
+                        <button id="check-answer-button" style="display:none;">Verificar</button>
+                        <p id="game-feedback"></p>
+                        <button id="next-question-button" style="display:none;">Siguiente</button>
+                        <button id="restart-game-button" style="display:none;">Reiniciar Juego</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Un Futuro Verde. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/30/4CAF50/FFFFFF?text=FB" alt="Facebook"></a>
+            <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/30/4CAF50/FFFFFF?text=TW" alt="Twitter"></a>
+            <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/30/4CAF50/FFFFFF?text=IG" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="contenido.js"></script>
+</body>
+</html>
